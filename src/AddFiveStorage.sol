@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MDN
+
+pragma solidity ^0.8.19;
+
+import {SimpleStorage} from "./SimpleStorage.sol";
+
+// INHERITANCE
+contract AddFiveStorage is SimpleStorage {
+    function sayHello() public pure returns (string memory) {
+        return "Hello";
+    }
+
+    function store(uint256 _newNumber) public override {
+        myFavoriteNumber = _newNumber + 5;
+    }
+}
